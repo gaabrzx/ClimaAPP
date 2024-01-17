@@ -30,10 +30,20 @@ document.querySelector("#search").addEventListener("submit", async (event) => {
         })
     } else {
         document.querySelector("#weather").classList.remove('show');
-        showAlert("Não foi possível localizar..."); 
+        showAlert(
+            `Não foi possível localizar...
+            
+            <img src="src/img/error.svg"/>
+            `); 
     }
 
 })
+
+function showAlert(msg) {
+    document.querySelector("#alert").innerHTML = msg;
+    document.querySelector("#alert").style.display = 'flex';
+
+} 
 
 function showInfo(json) {
     showAlert('');
@@ -49,8 +59,4 @@ function showInfo(json) {
     document.querySelector("#wind").innerHTML = `${json.windSpeed.toFixed(1)}km/h`
 
 }
-
-function showAlert(msg) {
-    document.querySelector("#alert").innerHTML = msg;
-} 
 

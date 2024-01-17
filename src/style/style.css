@@ -132,3 +132,18 @@ body {
 #wind_icon {
     color: #7c3aed;
 }
+
+#alert {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: blue;
+    text-align: center;
+    margin-top: 20px;
+    gap: 40px;
+}
+
+#alert img {
+    height: 150px;
+}
